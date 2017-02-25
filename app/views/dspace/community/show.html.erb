@@ -25,7 +25,7 @@
              <% @comm_info.metadata_fields.each do |field| %>
                <li><a href="metadata/<%= field.id %>">
                  <% if field.qualifier.nil? %>
-                   <%= 'dc.'+field.element+'.'+field.qualifier %>
+                   <%= 'dc.'+field.element %>
                  <% else %>
                    <%= 'dc.'+field.element+'.'+field.qualifier %>
                  <% end %>
