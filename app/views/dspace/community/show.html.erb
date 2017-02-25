@@ -12,6 +12,8 @@
      </div>
      <!-- /.row -->
      <div class="row">
+
+       <!-- Metadata Fields in Use Panel -->
        <div class="col-lg-8">
          <div class="panel panel-default">
            <div class="panel-heading">
@@ -19,12 +21,27 @@
              Metadata Fields In Use
            </div>
            <div class="panel-body">
+             <ul>
              <% @comm_info.metadata_fields.each do |field| %>
-               dc.<%= field.element %>.<%= field.qualifier %><br />
+               <li><a href="<% url_for(field) %>">dc.<%= field.element %>.<%= field.qualifier %></a></li>
              <% end %>
+             </ul>
            </div>
          </div>
        </div>
+
+       <!-- Metadata Field data Panel -->
+       <div class="col-lg-8">
+         <div class="panel panel-default">
+           <div class="panel-heading">
+             <i class="fa fa-sun-o" aria-hidden="true"></i>
+             Value list
+           </div>
+           <div class="panel-body">
+           </div>
+         </div>
+       </div>
+
      </div>
 </div>
 

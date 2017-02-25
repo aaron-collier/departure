@@ -3,7 +3,9 @@ module Departure
 		def inject_routes
 			inject_into_file 'config/routes.rb', before: /end/ do
 				"  root 'departure/homepage#index\n"\
-				"  resources :communities\n"
+				"  resources :communities do\n"\
+				"    resources :metadata\n"\
+				"  end\n"
 			end
 		end
 
