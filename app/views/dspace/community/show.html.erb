@@ -25,9 +25,9 @@
              <% @comm_info.metadata_fields.each do |field| %>
                <li>
                  <% if field.qualifier.nil? %>
-                 <%= link_to 'dc.'+field.element, url_for(@community, field) %>
+                 <%= link_to 'dc.'+field.element, url_for([@community, field]) %>
                  <% else %>
-                 <%= link_to 'dc.'+field.element+'.'+field.qualifier, url_for(@community, field) %>
+                 <%= link_to 'dc.'+field.element+'.'+field.qualifier, url_for([@community, field]) %>
                  <% end %>
                 </li>
              <% end %>
