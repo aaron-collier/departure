@@ -1,11 +1,17 @@
 module Dspace
 	class CommunityPresenter
+		attr_accessor :id
+
+		def initialize(id = nil)
+			self.id = id
+		end
+
 		def root_communities
 			@root_communities ||= Dspace::Community.where('community_id NOT IN (select child_comm_id from community2community)').order(:name)
 		end
 
 		def items
-		  @items ||= Dspace::CommunitiesToItem.where(community_id: params[:id])
+		  @items ||= Dspace::CommunitiesToItem.where(community_id: id)
 		end
 
 		def metadata_fields
