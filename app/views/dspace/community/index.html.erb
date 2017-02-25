@@ -2,6 +2,10 @@
      <div class="row">
          <div class="col-lg-12">
              <h1 class="page-header">DSpace Communities</h1>
+             <ol class="breadcrumb">
+               <li class="breadcrumb-item"><a href="/">Home</a></li>
+               <li class="breadcrumb-item active"><a href="/communities">Dspace Communities</a></li>
+             </ol>
          </div>
          <!-- /.col-lg-12 -->
      </div>
@@ -9,7 +13,7 @@
      <div class="row">
        <table class="table table-striped">
          <% @community_presenter.root_communities.each do |community| %>
-           <tr class='clickable-row' data-url='<%= url_for(community) %>'><td><%= community.name %><i class="fa fa-angle-right" aria-hidden="true"></i></td></tr>
+           <tr class='clickable-row' data-url='<%= url_for(community) %>'><td><%= community.name %> <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></td></tr>
          <% end %>
        </table>
      </div>
