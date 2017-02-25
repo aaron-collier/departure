@@ -11,7 +11,7 @@ module Dspace
 		end
 
 		def items
-		  @items ||= Dspace::CommunitiesToItem.where(community_id: id)
+		  @items ||= Dspace::CommunitiesToItem.where(community_id: self.id)
 		end
 
 		def metadata_fields
