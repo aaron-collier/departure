@@ -9,7 +9,7 @@
      <div class="row">
        <table class="table table-striped">
          <% @community_presenter.root_communities.each do |community| %>
-           <tr class='clickable-row' data-url='<%= url_for(community) %>'><td><%= community.name %></td></tr>
+           <tr class='clickable-row' data-url='<%= url_for(community) %>'><td><%= community.name %><i class="fa fa-angle-right" aria-hidden="true"></i></td></tr>
          <% end %>
        </table>
      </div>
