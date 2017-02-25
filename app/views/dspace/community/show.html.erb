@@ -23,7 +23,7 @@
            <div class="panel-body">
              <ul>
              <% @comm_info.metadata_fields.each do |field| %>
-               <li><a href="<% url_for(field) %>">dc.<%= field.element %>.<%= field.qualifier %></a></li>
+               <li><a href="<% dspace_community_metadata_path(field) %>">dc.<%= field.element %>.<%= field.qualifier %></a></li>
              <% end %>
              </ul>
            </div>
