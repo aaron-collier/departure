@@ -20,7 +20,7 @@
            </div>
            <div class="panel-body">
              <% @comm_info.metadata_fields.each do |field| %>
-               <%= field.element %>.<% field.qualifier %><br />
+               dc.<%= field.element %>.<%= field.qualifier %><br />
              <% end %>
            </div>
          </div>
