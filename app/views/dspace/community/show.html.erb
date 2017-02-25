@@ -23,12 +23,13 @@
            <div class="panel-body">
              <ul>
              <% @comm_info.metadata_fields.each do |field| %>
-               <li>
+               <li><a href="metadata/<%= field.id %>">
                  <% if field.qualifier.nil? %>
-                 <%= link_to 'dc.'+field.element, [@community, field]) %>
+                   <%= 'dc.'+field.element+'.'+field.qualifier %>
                  <% else %>
-                 <%= link_to 'dc.'+field.element+'.'+field.qualifier, [@community, field]) %>
+                   <%= 'dc.'+field.element+'.'+field.qualifier %>
                  <% end %>
+                 </a>
                 </li>
              <% end %>
              </ul>
