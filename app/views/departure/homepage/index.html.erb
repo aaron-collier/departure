@@ -33,14 +33,14 @@
 
             <!-- Total Item Views Block -->
             <div class="col-lg-3 col-md-6">
-                <div class="panel panel-success">
+                <div class="panel panel-green">
                     <div class="panel-heading">
                         <div class="row">
                           <div class="col-xs-3">
                                <i class="fa fa-book fa-5x"></i>
                            </div>
                            <div class="col-xs-9 text-right">
-                            <div>Item Views This Month</div>
+                            <div><%= @overview_presenter.total_collections %><br />Collections</div>
                           </div>
                        </div>
                      </div>
@@ -56,14 +56,14 @@
 
                  <!-- Total Bitstream Views Block -->
                  <div class="col-lg-3 col-md-6">
-                     <div class="panel panel-warning">
+                     <div class="panel panel-yellow">
                          <div class="panel-heading">
                              <div class="row">
                                <div class="col-xs-3">
                                     <i class="fa fa-download fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                 <div>Bitstream Downloads This Month</div>
+                                 <div><%= @overview_presenter.total_items %><br />Items</div>
                                </div>
                             </div>
                           </div>
@@ -79,14 +79,14 @@
 
                       <!-- Total Collection Views Block -->
                       <div class="col-lg-3 col-md-6">
-                          <div class="panel panel-danger">
+                          <div class="panel panel-red">
                               <div class="panel-heading">
                                   <div class="row">
                                     <div class="col-xs-3">
                                          <i class="fa fa-sitemap fa-5x"></i>
                                      </div>
                                      <div class="col-xs-9 text-right">
-                                      <div>Collection Views This Month</div>
+                                      <div><%= @overview_presenter.total_bitstreams %><br />Bitstreams</div>
                                     </div>
                                  </div>
                                </div>
