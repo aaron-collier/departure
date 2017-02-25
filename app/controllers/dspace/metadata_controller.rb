@@ -1,5 +1,4 @@
 class Dspace::MetadataController < ApplicationController
-  attr_accessible :community_id
 
 	layout 'departure'
 
