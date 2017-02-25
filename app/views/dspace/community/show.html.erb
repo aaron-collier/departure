@@ -23,7 +23,7 @@
            <div class="panel-body">
              <ul>
              <% @comm_info.metadata_fields.each do |field| %>
-               <li><a href="metadata/<%= field.id %>">
+               <li><a href="<%= @community.id %>/metadata/<%= field.id %>">
                  <% if field.qualifier.nil? %>
                    <%= 'dc.'+field.element %>
                  <% else %>
@@ -38,7 +38,7 @@
        </div>
 
        <!-- Metadata Field data Panel -->
-       <div class="col-lg-8">
+       <div class="col-lg-4">
          <div class="panel panel-default">
            <div class="panel-heading">
              <i class="fa fa-sun-o" aria-hidden="true"></i>
