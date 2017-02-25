@@ -15,7 +15,7 @@ module Dspace
 		end
 
 		def metadata_fields
-			@metadata_fields ||= Dspace::MetadataFieldRegistry.where(metadata_field_id: Dspace::MetadataValue.where(item_id: items.pluck("item_id")).distinct.pluck("metadata_field_id"))
+			@metadata_fields ||= Dspace::MetadataFieldRegistry.where(metadata_field_id: Dspace::MetadataValue.where(item_id: items.pluck("item_id")).distinct.pluck("metadata_field_id")).order(:element, :qualifier)
 		end
 	end
 end
