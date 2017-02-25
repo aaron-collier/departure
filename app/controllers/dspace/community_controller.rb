@@ -1,6 +1,6 @@
 class Dspace::CommunityController < ApplicationController
 
-	layout 'dspace_migrator'
+	layout 'departure'
 
 
   def index
